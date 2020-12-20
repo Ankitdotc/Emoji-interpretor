@@ -2,3 +2,26 @@
   font-family: sans-serif;
   text-align: center;
 }
+body {
+  background-color: #ea580c;
+}
+h1 {
+  color: #111827;
+  margin: 20px 0 0 20px;
+}
+.outputDiv {
+  border: 0.1rem solid black;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  width: 60%;
+  margin: auto;
+  font-weight: bolder;
+}
+.margin {
+  margin-top: 20px;
+}
+
+h1 {
+  color: #111827;
+  margin: 20px 0 33px 20px;
+}

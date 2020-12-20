@@ -15,8 +15,25 @@ const emojiDictionary = {
   "😔": "sad",
   "🥡": "takeout box",
   "❤️": "love",
-  "😑":
-    "annoyance" /** add some more to show how the app now expands when there's new data */
+  "😑": "annoyance",
+  "💖": "Sparkling Heart",
+  "👍": "Thumbs Up",
+  "😩": "Weary Face",
+  "👑": "Crown",
+  "🔫": "Pistol",
+  "😘": " Face Blowing a Kiss",
+  "😗": " Kissing Face",
+  "😭": "Loudly Crying Face",
+  "😊": "Smiling Face with Smiling Eyes",
+  "😭": "Loudly Crying Face",
+  "😊": "Smiling Face with Smiling Eyes",
+  " 😢": " Crying Face",
+  "😫": "Tired Face",
+  "😀": "Grinning Face",
+  "😤": "Face with Steam from Nose",
+  "👍": "Thumbs Up "
+
+  /** add some more to show how the app now expands when there's new data */
 };
 
 /**
@@ -47,34 +64,42 @@ export default function App() {
   return (
     /** concept 3 is onchange */
     <div className="App">
-      <h1>inside outttttt</h1>
+      <h1>Welcome to the fun world of emojis</h1>
       <input
         onChange={changeHandler}
         value={emoji}
-        placeholder={"Search your emoji"}
+        placeholder={"Search your emojis here"}
         style={{
           padding: "1em",
           minWidth: "80%"
         }}
       />
-      <h2> {emoji} </h2> {/** Concept 1: JSX */}
-      <h3> {meaning} </h3> {/** how much part is re-rendered. */}
-      {
-        /** Bonus feature; if time permmits */
-        /**
-         * concepts to cover: mapping a list
-         * click handler on list item
-         */
-        emojis.map((emoji) => (
-          <span
-            onClick={() => emojiClickHandler(emoji)}
-            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
-          >
-            {" "}
-            {emoji}{" "}
-          </span>
-        ))
-      }
+      <div className="margin">
+        <div className="outputDiv">
+          <h2> {emoji} </h2> {/** Concept 1: JSX */}
+          <h3> {meaning} </h3> {/** how much part is re-rendered. */}
+          {
+            /** Bonus feature; if time permmits */
+            /**
+             * concepts to cover: mapping a list
+             * click handler on list item
+             */
+            emojis.map((emoji) => (
+              <span
+                onClick={() => emojiClickHandler(emoji)}
+                style={{
+                  fontSize: "2rem",
+                  padding: "0.5rem",
+                  cursor: "pointer"
+                }}
+              >
+                {" "}
+                {emoji}{" "}
+              </span>
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 }
